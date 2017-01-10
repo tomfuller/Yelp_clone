@@ -11,6 +11,7 @@ feature 'restaurants' do
 
   context 'restaurants have been added' do
     before do
+      sign_up
       Restaurant.create(name: 'KFC', description: 'Deep fried goodness')
     end
 
@@ -51,6 +52,7 @@ feature 'restaurants' do
     let!(:kfc){ Restaurant.create(name:'KFC', description: 'Deep fried goodness') }
 
     scenario 'lets a user view a restaurant' do
+      sign_up
       visit '/restaurants'
       click_link 'KFC'
       expect(page).to have_content 'KFC'
