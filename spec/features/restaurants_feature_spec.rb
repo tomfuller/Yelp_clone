@@ -8,6 +8,7 @@ feature 'restaurants' do
       expect(page).to have_link 'Add a restaurant'
     end
   end
+  #github
 
   context 'restaurants have been added' do
     before do
@@ -63,7 +64,7 @@ feature 'restaurants' do
   context 'deleting restaurants' do
 
     before { Restaurant.create name: 'KFC', description: 'Deep fried goodness' }
-    
+
     scenario 'removes a restaurant when a user clicks a delete link' do
       visit '/restaurants'
       click_link 'Delete KFC'
