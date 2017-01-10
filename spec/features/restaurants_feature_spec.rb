@@ -8,7 +8,6 @@ feature 'restaurants' do
       expect(page).to have_link 'Add a restaurant'
     end
   end
-  #github
 
   context 'restaurants have been added' do
     before do
