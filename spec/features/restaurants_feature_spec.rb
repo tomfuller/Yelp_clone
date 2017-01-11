@@ -20,8 +20,8 @@ feature 'restaurants' do
 
     context 'restaurants have been added' do
       before do
-        Restaurant.create(name: 'KFC')
         sign_up
+        add_restaurant
       end
 
       scenario 'display restaurants' do
