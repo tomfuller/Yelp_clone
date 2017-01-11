@@ -8,3 +8,11 @@ def sign_up
   fill_in('Password confirmation', with: 'testtest')
   click_button('Sign up')
 end
+
+def add_restaurant
+  visit('/')
+  click_link 'Add a restaurant'
+  fill_in 'Name', with: 'KFC'
+  fill_in 'Description', with: 'Finger Lickin'
+  click_button "Create Restaurant"
+end

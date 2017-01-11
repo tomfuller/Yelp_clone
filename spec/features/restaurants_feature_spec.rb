@@ -1,5 +1,4 @@
 require 'rails_helper'
-require_relative './web_helper.rb'
 feature 'restaurants' do
 
   context 'when user is not present' do
