@@ -3,6 +3,7 @@ class RestaurantsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
+    @user = current_user if current_user
     @restaurants = Restaurant.all
     @reviews = Review.all
   end
