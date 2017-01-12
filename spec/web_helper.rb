@@ -25,3 +25,11 @@ def add_restaurant
   fill_in 'Description', with: 'Finger Lickin'
   click_button "Create Restaurant"
 end
+
+def add_review
+  visit '/'
+  click_link 'Review KFC'
+  fill_in 'Thoughts', with: 'Shitty restaurant'
+  select '1', from: "Rating"
+  click_button 'Leave review'
+end
